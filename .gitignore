@@ -13,6 +13,8 @@ web/target/
 .idea
 .idea/*
 .idea/**
+.idea/libraries
+/.idea/
 
 # Compiled class file
 *.class
