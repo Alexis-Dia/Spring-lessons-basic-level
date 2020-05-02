@@ -10,6 +10,6 @@ public class RavenListener implements ApplicationListener<ContextRefreshedEvent>
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
-        System.out.println("Send raven.......");
+        System.out.println("Send raven.....");
     }
 }

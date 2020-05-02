@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>lesson4-raven-starter</groupId>
+    <groupId>com.lesson4-raven-starter</groupId>
     <artifactId>lesson4-raven-starter</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -17,7 +17,8 @@
 
     <parent>
         <artifactId>lesson4-root-project</artifactId>
-        <groupId>lesson4-root-project</groupId>
+        <groupId>com.lesson4-root-project</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
 </project>
