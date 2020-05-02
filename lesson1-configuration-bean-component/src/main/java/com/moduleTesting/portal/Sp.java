@@ -14,6 +14,9 @@ public class Sp {
         Dog dog = (Dog) context.getBean("dog");
         Parrot parrot = context.getBean("parrot-kesha", Parrot.class);
         Dog dog2= (Dog) context.getBean("adsadasda");
+        Husky husky= (Husky) context.getBean("hysky");
+        MyConfigWithoutBeanAnnotation myConfig= (MyConfigWithoutBeanAnnotation) context.getBean(MyConfigWithoutBeanAnnotation.class);
+        //myConfig.changeName("uio");
 
         //System.out.println(cat.getName());
         System.out.println(dog.getName());
