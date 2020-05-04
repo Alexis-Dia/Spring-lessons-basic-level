@@ -2,12 +2,12 @@ package ironbank;
 
 import ironbank.annotation.ConditionOnProduction;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * @author Alexey Druzik on 5/2/2020
  */
-@Configuration
+/* When we are using spring.factories - it's not necessary use @Configuration*/
+//@Configuration
 public class IronConfiguration {
 
     @Bean
