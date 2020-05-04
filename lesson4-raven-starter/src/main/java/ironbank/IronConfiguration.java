@@ -1,5 +1,6 @@
 package ironbank;
 
+import ironbank.annotation.ConditionOnProduction;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class IronConfiguration {
 
     @Bean
+    @ConditionOnProduction
     public RavenListener ravenListener() {
         return new RavenListener();
     }
