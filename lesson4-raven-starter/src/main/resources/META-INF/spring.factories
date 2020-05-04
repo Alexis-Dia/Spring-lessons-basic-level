@@ -1,1 +1,2 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=ironbank.IronConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  ironbank.IronConfiguration, ironbank.Dog
