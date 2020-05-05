@@ -1,6 +1,8 @@
 package ironbank;
 
 import ironbank.annotation.ConditionOnProduction;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -8,11 +10,13 @@ import org.springframework.context.annotation.Bean;
  */
 /* When we are using spring.factories - it's not necessary use @Configuration*/
 //@Configuration
+@EnableConfigurationProperties(RavenProperties.class)
 public class IronConfiguration {
 
     @Bean
     @ConditionOnProduction
-    public RavenListener ravenListener() {
-        return new RavenListener();
+    @ConditionalOnProperty("raven.destination")
+    public RavenListener ravenListener(RavenProperties ravenProperties) {
+        return new RavenListener(ravenProperties);
     }
 }

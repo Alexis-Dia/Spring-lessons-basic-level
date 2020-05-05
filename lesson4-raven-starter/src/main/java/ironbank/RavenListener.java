@@ -8,8 +8,16 @@ import org.springframework.context.event.ContextRefreshedEvent;
  */
 public class RavenListener implements ApplicationListener<ContextRefreshedEvent> {
 
+    private final RavenProperties ravenProperties;
+
+    public RavenListener(RavenProperties ravenProperties) {
+        this.ravenProperties = ravenProperties;
+    }
+
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
-        System.out.println("Send raven.....");
+        ravenProperties.getDestination().forEach(d -> {
+            System.out.println("Send raven to " + ravenProperties.getDestination());
+        });
     }
 }
