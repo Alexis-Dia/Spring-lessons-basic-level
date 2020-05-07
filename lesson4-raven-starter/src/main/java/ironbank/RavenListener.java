@@ -16,8 +16,8 @@ public class RavenListener implements ApplicationListener<ContextRefreshedEvent>
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
-        ravenProperties.getDestination().forEach(d -> {
-            System.out.println("Send raven to " + ravenProperties.getDestination());
+        ravenProperties.getDestination().forEach(destination -> {
+            System.out.println("Send raven to " + destination);
         });
     }
 }
