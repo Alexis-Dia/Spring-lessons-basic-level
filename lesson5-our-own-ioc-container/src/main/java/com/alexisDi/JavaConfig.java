@@ -19,6 +19,11 @@ public class JavaConfig implements Config {
     }
 
     @Override
+    public Reflections getScanner() {
+        return scanner;
+    }
+
+    @Override
     public <T> Class<? extends T> getImplClass(Class<T> ifc) {
         return ifc2ImplClass.computeIfAbsent(ifc, aClass -> {
             Set<Class<? extends T>> classes = scanner.getSubTypesOf(ifc);
