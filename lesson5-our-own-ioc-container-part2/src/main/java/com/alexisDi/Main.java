@@ -5,7 +5,7 @@ package com.alexisDi;
  */
 public class Main {
     public static void main(String[] args) {
-        CoronadDisinfector coronadDisinfector = new CoronadDisinfector();
+        CoronadDisinfector coronadDisinfector = ObjectFactory.getInstance().createObject(CoronadDisinfector.class);
         coronadDisinfector.start(new Room());
     }
 }
