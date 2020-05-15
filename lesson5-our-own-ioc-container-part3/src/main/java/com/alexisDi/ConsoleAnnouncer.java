@@ -5,7 +5,8 @@ package com.alexisDi;
  */
 public class ConsoleAnnouncer implements Announcer {
 
-    private Recommendator recommendator = ObjectFactory.getInstance().createObject(Recommendator.class);
+    @InjectByType
+    private Recommendator recommendator;
 
     @Override
     public void announce(String message) {

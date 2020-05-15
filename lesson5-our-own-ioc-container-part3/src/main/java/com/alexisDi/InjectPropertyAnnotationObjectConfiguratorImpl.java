@@ -27,13 +27,14 @@ public class InjectPropertyAnnotationObjectConfiguratorImpl implements ObjectCon
 
     @Override
     @SneakyThrows
-    public void configure(Object t) {
+    public void configure(Object t, ApplicationContext context) {
         Class<?> implClass = t.getClass();
         for (Field field : implClass.getDeclaredFields()) {
             InjectProperty annotation = field.getAnnotation(InjectProperty.class);
 
             if (annotation != null) {
-                String value = annotation.value().isEmpty() ? propertiesMap.get(field.getName()) : annotation.value();
+                //String value = annotation.value().isEmpty() ? propertiesMap.get(field.getName()) : annotation.value();
+                String value = annotation.value().isEmpty() ? propertiesMap.get(field.getName()) : propertiesMap.get(annotation.value());
                 field.setAccessible(true);
                 field.set(t, value);
             }

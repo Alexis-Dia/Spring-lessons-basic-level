@@ -3,6 +3,7 @@ package com.alexisDi;
 /**
  * @author Alexey Druzik on 5/12/2020
  */
+@Singleton
 public class RecommendatorImpl implements Recommendator {
 
     @InjectProperty("wisky")
