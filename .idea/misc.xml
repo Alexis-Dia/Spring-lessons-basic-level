@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/configuration-bean-component-lesson/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson1-configuration-bean-component-lesson/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson4-root-project/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson2-spring-value-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson3-configuration-properties/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson1-configuration-bean-component/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson4-raven-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson5-our-own-ioc-container/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson5-our-own-ioc-container-part2/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson5-our-own-ioc-container-part3/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/lesson4-iron-starter/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11.0.2" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

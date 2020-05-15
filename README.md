@@ -3,3 +3,5 @@
 3. Lesson3 is about configuring context using @ConfigurationProperties, @EnableConfigurationProperties, @Component 
 4. Lesson4 is about starters, conditions, profiles from Spring-Boot
 5. Lesson5 is about writing our own container like Spring, Guice
+6. Lesson5 is about writing our own @InjectByType annotation
+7. Lesson5 is about writing our own cash
