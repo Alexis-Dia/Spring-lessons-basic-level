@@ -32,6 +32,13 @@ public class ObjectFactory {
         if (type.isInterface()) {
             implClass = config.getImplClass(type);
         }
+
+        /**Here the answer to a question why it is necessary at creation of DTO-objects of entities Spring, Hibernate, etc. in a case
+             creation of the own designers it is necessary to create also the empty designer, t to Spring, Hibernate
+             create objects with the help of reflection, which causes an empty constructor:
+        Тут ответ на вопрос, почему надо при создании DTO-объектов сущностей Spring, Hibernate и т д в случае
+            создания своих собственных конструкторов надо создавать и пустой конструктор, т к Spring, Hibernate
+            создают объекты с помощью рефлексии, которая и вызывает пустой конструктор:**/
         final T t = implClass.getDeclaredConstructor().newInstance();
 
         configurators.forEach(objectConfigurator -> objectConfigurator.configure(t));
