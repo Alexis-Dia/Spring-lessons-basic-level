@@ -7,3 +7,4 @@
 5. Lesson5 is about writing our own container like Spring, Guice
 6. Lesson5 is about writing our own @InjectByType annotation
 7. Lesson5 is about writing our own cash
+8. Lesson6 is about @Conditional
