@@ -12,6 +12,12 @@ import static java.util.stream.Collectors.toMap;
 
 /**
  * @author Alexey Druzik on 5/12/2020
+ * This is an analog of the Spring implementation of the BeanPostProcessor interface, which the user writes to create their
+ *     own custom annotations. In this case, just look for a custom annotation of the Inject Property, and if there is one,
+ *     then the bin is being re-configured.
+ * Это аналог реализации Spring-интерфейса BeanPostProcessor, которые пишет пользователь, для создания своих
+ *     собственных аннотаций. В данном случает просто ищется собственная аннотация InjectProperty, и если она есть, то
+ *     происходит донастройка бина.
  */
 public class InjectPropertyAnnotationObjectConfiguratorImpl implements ObjectConfigurator {
 

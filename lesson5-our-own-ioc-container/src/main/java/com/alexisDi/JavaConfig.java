@@ -23,6 +23,9 @@ public class JavaConfig implements Config {
         return scanner;
     }
 
+    /**
+     * Method computeIfAbsent - will put in a Map a new value if first param ifc is absent at the collection
+     */
     @Override
     public <T> Class<? extends T> getImplClass(Class<T> ifc) {
         return ifc2ImplClass.computeIfAbsent(ifc, aClass -> {

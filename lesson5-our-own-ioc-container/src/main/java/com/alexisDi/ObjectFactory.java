@@ -39,10 +39,26 @@ public class ObjectFactory {
         Тут ответ на вопрос, почему надо при создании DTO-объектов сущностей Spring, Hibernate и т д в случае
             создания своих собственных конструкторов надо создавать и пустой конструктор, т к Spring, Hibernate
             создают объекты с помощью рефлексии, которая и вызывает пустой конструктор:**/
-        final T t = implClass.getDeclaredConstructor().newInstance();
+        final T bean = implClass.getDeclaredConstructor().newInstance();
 
-        configurators.forEach(objectConfigurator -> objectConfigurator.configure(t));
+        /**
+         * Here is an analog of the Spring mechanism, which when raising the context, configures the beans using implementations
+         *     the BeanPostProcessor interface (which has two methods). In our case:
+         *     1. The analog of the BeanPostProcessor Spring interface is our ObjectConfigurator interface.
+         *     2. The analog of the postProcessBeforeInitialization and postProcessAfterInitialization BeanPostProcessor is
+         *         our method is configure (ob).
+         *     3. The meaning of this mechanism is that after creating an instance of an object, it runs through the created bin (object)
+         *         through all BeanPostProcessors.
+         * Здесь аналог Spring-механизма, который при поднятии контекста настраивает бины с помощью реализаций
+         *     интерфейса BeanPostProcessor(у которого есть два метода). В нашем случае:
+         *     1. Аналогом Spring-интерфейса BeanPostProcessor является - наш интерфейс ObjectConfigurator.
+         *     2. Аналогомами postProcessBeforeInitialization и postProcessAfterInitialization BeanPostProcessor'а является
+         *         наш метод - configure(ob).
+         *     3. Смысл этого механизма в том, что после создания инстанса объекта, он прогоняет через созданный бин(объект)
+         *         через все BeanPostProcessor'ы.
+         */
+        configurators.forEach(objectConfigurator -> objectConfigurator.configure(bean));
 
-        return t;
+        return bean;
     }
 }
